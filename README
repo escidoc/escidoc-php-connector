@@ -32,6 +32,7 @@ Dependencies:
 The PHPConnector requires the following dependencies to be provided by your solution:
 
 - PEAR/HTTP (may get changed to PECL_HTTP for streaming)
+- PEAR/Net
 
 Additionally to these dependencies the following dependencies are required when developing this project:
 
