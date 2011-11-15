@@ -21,7 +21,10 @@ may use this one for you solution as well.
 Because of this ClassLoading, each class has to be located in a PHP file named exactly like the class. If
 there are more classes in one PHP file, the ClassLoader will *not* be able to resolve them.
 
-Example: Class Foo has to be located in file Foo.php
+Example: Class \root\b\c\Foo has to be located in file root/b/c/Foo.php.
+
+Depending on the setup of the ClassLoader the directory 'root' can be named differently than its namespace
+representation. Read the ClassLoader's registerNamespaces()-documentation for details.
 
 Dependencies:
 =============
