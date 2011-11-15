@@ -20,6 +20,8 @@ use \ReflectionClass as ReflectionClass;
 use \ReflectionException as ReflectionException;
 use \Exception as Exception;
 
+// FIXME delete this file !!!
+
 class eSciDocExceptionMapper {
 
 	static public function eSciDocExceptionMapper($exceptionmessage){
@@ -52,44 +54,44 @@ class eSciDocExceptionMapper {
 
 	}
 }
-class EscidocException extends \RuntimeException {
-
-	protected  $fullxmlmessage;
-
-	public function  __construct($fullxmlmessage, $code=null, $previous=null) {
-		$this->fullxmlmessage=$fullxmlmessage;
-
-		$dom= DOMDocument::loadXML($fullxmlmessage);
-		$xpath=new DOMXPath($dom);
-
-		if ($xpath->query('//exception/title')->length <1
-		|| $xpath->query('//exception/message')->length <1
-		//            || $xpath->query('//exception/stack-trace')->length <1
-		)
-		throw new Exception("Could not map Exception from Escidoc-messages");
-
-		$title=$xpath->query('//exception/title')->item(0)->nodeValue;
-		$message=$xpath->query('//exception/message')->item(0)->nodeValue;
-		//        $stacktrace=$xpath->query('//exception/stack-trace')->item(0)->nodeValue;
-
-		$errmsg=substr($title,4);
-		$errcode=intval(substr($title,0,3));
-
-		parent::__construct($errmsg."<br>".$message, $errcode, $previous);
-	}
-
-	public function getFullEscidocMessage(){
-		return $this->fullxmlmessage;
-	}
-
-}
+//class EscidocException extends \RuntimeException {
+//
+//	protected  $fullxmlmessage;
+//
+//	public function  __construct($fullxmlmessage, $code=null, $previous=null) {
+//		$this->fullxmlmessage=$fullxmlmessage;
+//
+//		$dom= DOMDocument::loadXML($fullxmlmessage);
+//		$xpath=new DOMXPath($dom);
+//
+//		if ($xpath->query('//exception/title')->length <1
+//		|| $xpath->query('//exception/message')->length <1
+//		//            || $xpath->query('//exception/stack-trace')->length <1
+//		)
+//		throw new Exception("Could not map Exception from Escidoc-messages");
+//
+//		$title=$xpath->query('//exception/title')->item(0)->nodeValue;
+//		$message=$xpath->query('//exception/message')->item(0)->nodeValue;
+//		//        $stacktrace=$xpath->query('//exception/stack-trace')->item(0)->nodeValue;
+//
+//		$errmsg=substr($title,4);
+//		$errcode=intval(substr($title,0,3));
+//
+//		parent::__construct($errmsg."<br>".$message, $errcode, $previous);
+//	}
+//
+//	public function getFullEscidocMessage(){
+//		return $this->fullxmlmessage;
+//	}
+//
+//}
 /*
  * Exception-hierarchy extracted from Java-Client Library by FIZ Karlsruhe
  */
 
-class MethodNotFoundException extends EscidocException{}
+//class MethodNotFoundException extends EscidocException{}
 
-class ApplicationException  extends EscidocException {}
+//class ApplicationException  extends EscidocException {}
 
 //class ResourceNotFoundException  extends ApplicationException  {}
 //class ActionNotFoundException  extends ResourceNotFoundException{}
@@ -140,9 +142,9 @@ class ApplicationException  extends EscidocException {}
 //class TaskNotFoundException  extends ResourceNotFoundException  {}
 //class UserAttributeNotFoundException  extends ResourceNotFoundException {}
 
-class SecurityException  extends EscidocException{}
-class AuthorizationException  extends SecurityException  {}
-class AuthenticationException  extends SecurityException {}
+//class SecurityException  extends EscidocException{}
+//class AuthorizationException  extends SecurityException  {}
+//class AuthenticationException  extends SecurityException {}
 
 //class ValidationException  extends ApplicationException{}
 //class ReferenceCycleException  extends ValidationException{}
@@ -156,7 +158,7 @@ class AuthenticationException  extends SecurityException {}
 //class InvalidStatusException  extends ValidationException  {}
 
 
-class TmeException  extends ApplicationException  {}
+//class TmeException  extends ApplicationException  {}
 
 
 //class ContextNotEmptyException  extends ValidationException {}
@@ -183,7 +185,7 @@ class TmeException  extends ApplicationException  {}
 //class MissingElementValueException  extends MissingParameterException  {}
 
 
-class ResourceInUseException  extends ApplicationException {}
+//class ResourceInUseException  extends ApplicationException {}
 
 //class RuleViolationException  extends ApplicationException {}
 //class UniqueConstraintViolationException  extends RuleViolationException{}
@@ -227,5 +229,5 @@ class ResourceInUseException  extends ApplicationException {}
 //class WorkflowEngineSystemException  extends SystemException{}
 //class StatisticPreprocessingSystemException  extends SystemException{}
 
-class StreamNotFoundException  extends EscidocException{}
+//class StreamNotFoundException  extends EscidocException{}
 ?>
