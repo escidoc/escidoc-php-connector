@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="http://localhost:8080/xsl/Resource2Html.xsl"?>
+<context:context    xmlns:context="http://www.escidoc.de/schemas/context/0.7"  xmlns:prop="http://escidoc.de/core/01/properties/"
+                    xmlns:srel="http://escidoc.de/core/01/structural-relations/" xmlns:xlink="http://www.w3.org/1999/xlink" >
+    <context:properties>
+
+        <prop:name>##PROJECT_TITLE###</prop:name>
+        <prop:description>This context contains project data from ###PROJECT_TITLE### at ###AFFILIATION### for membership please contact ###MAIL### </prop:description>
+        <prop:type>panmetadocs</prop:type>
+
+        <prop:organizational-units>
+            <srel:organizational-unit  xlink:href="/oum/organizational-unit/###ORG_UNIT###" />
+        </prop:organizational-units>
+    </context:properties>
+
+    <context:admin-descriptors xlink:title="Admin Descriptors">
+
+        <context:admin-descriptor name="somename" >
+
+        </context:admin-descriptor>
+
+    </context:admin-descriptors>
+</context:context>
+
+

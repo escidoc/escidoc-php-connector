@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<escidocComponents:component xmlns:escidocComponents="http://www.escidoc.de/schemas/components/0.9" xmlns:escidocMetadataRecords="http://www.escidoc.de/schemas/metadatarecords/0.5"
+	xmlns:prop="http://escidoc.de/core/01/properties/">
+            
+        <escidocComponents:properties>
+                <prop:valid-status>valid</prop:valid-status>
+                <prop:visibility>public</prop:visibility>
+                <prop:content-category>semi-structural</prop:content-category>
+                <prop:mime-type>###MIME_TYPE###</prop:mime-type>
+        </escidocComponents:properties>
+
+        <escidocComponents:content storage="internal-managed"/>
+
+        <escidocMetadataRecords:md-records>
+            <escidocMetadataRecords:md-record name="escidoc">
+                <file xmlns="http://purl.org/escidoc/metadata/profiles/0.1/file">
+                  <dc:title xmlns:dc="http://purl.org/dc/elements/1.1/">###FILENAME###</dc:title>
+                  <dc:description xmlns:dc="http://purl.org/dc/elements/1.1/"></dc:description>
+                  <dc:format xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="dcterms:IMT">###MIME_TYPE###</dc:format>
+                  <dcterms:extent xmlns:dcterms="http://purl.org/dc/terms/">###FILESIZE###</dcterms:extent>
+                  <dcterms:dateCopyrighted xmlns:dcterms="http://purl.org/dc/terms/"></dcterms:dateCopyrighted>
+                  <dc:rights xmlns:dc="http://purl.org/dc/elements/1.1/"></dc:rights>
+                  <dcterms:license xmlns:dcterms="http://purl.org/dc/terms/"></dcterms:license>
+                </file>
+            </escidocMetadataRecords:md-record>
+        </escidocMetadataRecords:md-records>
+
+</escidocComponents:component>
+	
+
