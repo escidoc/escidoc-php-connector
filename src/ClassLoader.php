@@ -4,9 +4,16 @@ class ClassLoader
 	private $namespaces = array();
 
 	/**
-	 * Registers an array of namespaces
+	 * Registers an array of namespaces (namespaces as keys and locations as values)
+	 * In order to find a file, the location of a namespace will be used and because of that, you can
+	 * substitute any directory with one namespace.
 	 *
-	 * @param array $namespaces An array of namespaces (namespaces as keys and locations as values)
+	 * Example: registerNamespaces(array('foo' => __DIR__.'/lib/bar'));
+	 *
+	 * In this example, the location __DIR__.'/lib/bar' will substitute the namespace 'foo' and therefore
+	 * the namespace 'foo/x/y' will result in __DIR__.'/lib/bar/x/y' to locate the php files.
+	 *
+	 * @param array $namespaces An array of namespaces
 	 *
 	 * @api
 	 */
