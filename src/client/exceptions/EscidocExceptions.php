@@ -159,8 +159,8 @@ class InvalidStatusException  extends ValidationException  {}
 class TmeException  extends ApplicationException  {}
 
 
-class ContextNotEmptyException  extends ValidationException {}
-class InvalidContentModelException  extends ValidationException{}
+//class ContextNotEmptyException  extends ValidationException {}
+//class InvalidContentModelException  extends ValidationException{}
 class InvalidTripleStoreOutputFormatException  extends ValidationException{}
 class InvalidWorkflowDefinitionException  extends ValidationException  {}
 class InvalidContextException  extends ValidationException  {}
@@ -215,17 +215,17 @@ class ContextNameNotUniqueException  extends RuleViolationException  {}
 class RelationRuleViolationException  extends RuleViolationException  {}
 class OrganizationalUnitHasChildrenException  extends RuleViolationException{}
 
-class SystemException  extends EscidocException{}
-class SqlDatabaseSystemException  extends SystemException{}
-class WebserverSystemException  extends SystemException{}
-class TripleStoreSystemException  extends SystemException{}
-class FedoraSystemException  extends SystemException{}
-class ApplicationServerSystemException  extends SystemException{}
-class XmlParserSystemException  extends SystemException{}
-class IntegritySystemException  extends SystemException{}
-class FileSystemException  extends SystemException{}
-class WorkflowEngineSystemException  extends SystemException{}
-class StatisticPreprocessingSystemException  extends SystemException{}
+//class SystemException  extends EscidocException{}
+//class SqlDatabaseSystemException  extends SystemException{}
+//class WebserverSystemException  extends SystemException{}
+//class TripleStoreSystemException  extends SystemException{}
+//class FedoraSystemException  extends SystemException{}
+//class ApplicationServerSystemException  extends SystemException{}
+//class XmlParserSystemException  extends SystemException{}
+//class IntegritySystemException  extends SystemException{}
+//class FileSystemException  extends SystemException{}
+//class WorkflowEngineSystemException  extends SystemException{}
+//class StatisticPreprocessingSystemException  extends SystemException{}
 
 class StreamNotFoundException  extends EscidocException{}
 ?>
