@@ -75,18 +75,20 @@ class ClassLoader
 	}
 }
 
-class PHPCClassLoader extends ClassLoader {
+final class PHPConnectorClassLoader extends ClassLoader {
 
 	private static $cl = null;
 
 	public static final function init() {
 		if (self::$cl == null) {
-			self::$cl = new PHPCClassLoader();
+			self::$cl = new PHPConnectorClassLoader();
 		}
 		self::$cl->registerNamespaces(array('escidoc'=>__DIR__));
 		self::$cl->register();
 	}
+
+	private function __construct(){}
 }
 
-PHPCClassLoader::init();
+PHPConnectorClassLoader::init();
 ?>
