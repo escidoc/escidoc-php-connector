@@ -144,16 +144,16 @@ class SecurityException  extends EscidocException{}
 class AuthorizationException  extends SecurityException  {}
 class AuthenticationException  extends SecurityException {}
 
-class ValidationException  extends ApplicationException{}
-class ReferenceCycleException  extends ValidationException{}
-class InvalidContextStatusException  extends ValidationException{}
-class XmlCorruptedException  extends InvalidXmlException  {}
-class InvalidItemStatusException  extends ValidationException {}
-class XmlSchemaValidationException  extends InvalidXmlException {}
-class InvalidResourceException  extends ValidationException  {}
-class InvalidXmlException  extends ValidationException  {}
-class InvalidAggregationTypeException  extends ValidationException{}
-class InvalidStatusException  extends ValidationException  {}
+//class ValidationException  extends ApplicationException{}
+//class ReferenceCycleException  extends ValidationException{}
+//class InvalidContextStatusException  extends ValidationException{}
+//class XmlCorruptedException  extends InvalidXmlException  {}
+//class InvalidItemStatusException  extends ValidationException {}
+//class XmlSchemaValidationException  extends InvalidXmlException {}
+//class InvalidResourceException  extends ValidationException  {}
+//class InvalidXmlException  extends ValidationException  {}
+//class InvalidAggregationTypeException  extends ValidationException{}
+//class InvalidStatusException  extends ValidationException  {}
 
 
 class TmeException  extends ApplicationException  {}
@@ -161,16 +161,16 @@ class TmeException  extends ApplicationException  {}
 
 //class ContextNotEmptyException  extends ValidationException {}
 //class InvalidContentModelException  extends ValidationException{}
-class InvalidTripleStoreOutputFormatException  extends ValidationException{}
-class InvalidWorkflowDefinitionException  extends ValidationException  {}
-class InvalidContextException  extends ValidationException  {}
-class InvalidRelationPropertiesException  extends ValidationException{}
-class InvalidSearchQueryException  extends ValidationException  {}
-class InvalidTripleStoreQueryException  extends ValidationException  {}
-class InvalidWorkflowTypeException  extends ValidationException  {}
-class InvalidContentException  extends ValidationException  {}
-class InvalidSqlException  extends ValidationException  {}
-class InvalidPidException  extends ValidationException  {}
+//class InvalidTripleStoreOutputFormatException  extends ValidationException{}
+//class InvalidWorkflowDefinitionException  extends ValidationException  {}
+//class InvalidContextException  extends ValidationException  {}
+//class InvalidRelationPropertiesException  extends ValidationException{}
+//class InvalidSearchQueryException  extends ValidationException  {}
+//class InvalidTripleStoreQueryException  extends ValidationException  {}
+//class InvalidWorkflowTypeException  extends ValidationException  {}
+//class InvalidContentException  extends ValidationException  {}
+//class InvalidSqlException  extends ValidationException  {}
+//class InvalidPidException  extends ValidationException  {}
 
 class MissingParameterException  extends ApplicationException{}
 class MissingMethodParameterException  extends MissingParameterException{}
