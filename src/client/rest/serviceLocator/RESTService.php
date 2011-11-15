@@ -1,31 +1,29 @@
 <?php
 namespace escidoc\client\rest;
 
-require_once '../../../ClassLoader.php';
-
-require_once 'HTTP/Request.php';
-
 use escidoc\client\http\Url;
 use escidoc\client\http\HttpMethod;
-use escidoc\client\exceptions\InternalClientException as InternalClientException;
+use escidoc\client\exceptions\TransportException;
 
-use \HTTP_Request as HTTP_Request;
-use \HTTP_Request_Listener as HTTP_Request_Listener;
-use \PEAR as PEAR;
-use \Exception as Exception;
-use \HttpRequest as HttpRequest;
+use \HTTP_Request;
+use \PEAR;
+use \Exception;
+use \Net_URL;
+
+require_once '../../../ClassLoader.php';
+require_once 'HTTP/Request.php';
 
 class RESTService {
 
 	/**
-	 * @var Url
+	 * @var Net_URL
 	 */
 	private $serviceAddress;
 
 	/**
-	 * @param Url $serviceAddress
+	 * @param Net_URL $serviceAddress
 	 */
-	public function __construct(Url $serviceAddress) {
+	public function __construct(Net_URL $serviceAddress) {
 		$this->serviceAddress = $serviceAddress;
 	}
 
@@ -41,7 +39,7 @@ class RESTService {
 
 		$checkedPath = $this->checkPath($path);
 
-		$httpRequest = new HTTP_Request($this->serviceAddress.$checkedPath);
+		$httpRequest = new HTTP_Request($this->serviceAddress->getURL().$checkedPath);
 		$httpRequest->addCookie('escidocCookie', $handle);
 		$httpRequest->setMethod($httpMethod);
 		if ($data != null) {
@@ -52,7 +50,7 @@ class RESTService {
 		$req_err = $httpRequest->sendRequest();
 		// catch connection timeouts, connection refused etc.
 		if (PEAR::isError($req_err)) {
-			throw new InternalClientException($this->serviceAddress." : ".$req_err->getMessage(), $req_err->getCode());
+			throw new TransportException($this->serviceAddress->getURL()." : ".$req_err->getMessage(), $req_err->getCode());
 		}
 		// handle response
 		$code = $httpRequest->getResponseCode();
@@ -85,6 +83,15 @@ class RESTService {
 	}
 
 	/**
+	 * Returns the servieAddress URL.
+	 *
+	 * @return Net_URL The serviceAddress URL
+	 */
+	public function getServiceAddress() {
+		return $this->serviceAddress;
+	}
+
+	/**
 	 *
 	 * @param string $path
 	 * @return string
@@ -100,14 +107,10 @@ class RESTService {
 	}
 }
 
-$r = new RestService(new Url("http:localhost:8080"));
+$r = new RestService(new Net_URL("http://localhost:8080"));
 try {
 	$r->send(HttpMethod::GET(), "/ir/items");
 } catch(Exception $e) {
 	echo $e."\n";
 }
-$foo = new HTTP_Request("http:localhost:8080");
-$r->configureHttpClient($foo);
-echo var_dump($foo->_allowRedirects);
-
 ?>
