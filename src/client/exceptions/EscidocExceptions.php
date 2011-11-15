@@ -172,48 +172,48 @@ class TmeException  extends ApplicationException  {}
 //class InvalidSqlException  extends ValidationException  {}
 //class InvalidPidException  extends ValidationException  {}
 
-class MissingParameterException  extends ApplicationException{}
-class MissingMethodParameterException  extends MissingParameterException{}
-class MissingMdRecordException  extends MissingParameterException  {}
-class MissingUserListException  extends MissingParameterException  {}
-class MissingContentException  extends MissingParameterException  {}
-class MissingLicenceException  extends MissingParameterException  {}
-class MissingWorkflowVariableException  extends MissingParameterException{}
-class MissingAttributeValueException  extends MissingParameterException  {}
-class MissingElementValueException  extends MissingParameterException  {}
+//class MissingParameterException  extends ApplicationException{}
+//class MissingMethodParameterException  extends MissingParameterException{}
+//class MissingMdRecordException  extends MissingParameterException  {}
+//class MissingUserListException  extends MissingParameterException  {}
+//class MissingContentException  extends MissingParameterException  {}
+//class MissingLicenceException  extends MissingParameterException  {}
+//class MissingWorkflowVariableException  extends MissingParameterException{}
+//class MissingAttributeValueException  extends MissingParameterException  {}
+//class MissingElementValueException  extends MissingParameterException  {}
 
 
 class ResourceInUseException  extends ApplicationException {}
 
-class RuleViolationException  extends ApplicationException {}
-class UniqueConstraintViolationException  extends RuleViolationException{}
-class ScopeContextViolationException  extends RuleViolationException  {}
-class OrganizationalUnitNameNotUniqueException  extends RuleViolationException{}
-class RoleInUseViolationException  extends RuleViolationException  {}
-class AdminDescriptorViolationException  extends RuleViolationException{}
-class TimeFrameViolationException  extends RuleViolationException  {}
-class AlreadyPublishedException  extends RuleViolationException  {}
-class AlreadyDeletedException  extends RuleViolationException  {}
-class OrganizationalUnitHierarchyViolationException  extends RuleViolationException{}
-class AlreadyWithdrawnException  extends RuleViolationException  {}
-class LockingException  extends RuleViolationException{}
-class AlreadyRevokedException  extends RuleViolationException{}
-class AlreadyExistsException  extends RuleViolationException  {}
-class PidAlreadyAssignedException  extends RuleViolationException {}
-class UserGroupHierarchyViolationException  extends RuleViolationException{}
-class ReadonlyViolationException  extends RuleViolationException  {}
-class WorkflowViolationException  extends RuleViolationException{}
-class AlreadyDeactiveException  extends RuleViolationException  {}
-class NotPublishedException  extends RuleViolationException  {}
-class OptimisticLockingException  extends RuleViolationException {}
-class AlreadyActiveException  extends RuleViolationException  {}
-class ReadonlyVersionException  extends RuleViolationException  {}
-class ReadonlyAttributeViolationException  extends ReadonlyViolationException {}
-class ReadonlyElementViolationException  extends ReadonlyViolationException  {}
-class WorkflowTaskViolationException  extends RuleViolationException  {}
-class ContextNameNotUniqueException  extends RuleViolationException  {}
-class RelationRuleViolationException  extends RuleViolationException  {}
-class OrganizationalUnitHasChildrenException  extends RuleViolationException{}
+//class RuleViolationException  extends ApplicationException {}
+//class UniqueConstraintViolationException  extends RuleViolationException{}
+//class ScopeContextViolationException  extends RuleViolationException  {}
+//class OrganizationalUnitNameNotUniqueException  extends RuleViolationException{}
+//class RoleInUseViolationException  extends RuleViolationException  {}
+//class AdminDescriptorViolationException  extends RuleViolationException{}
+//class TimeFrameViolationException  extends RuleViolationException  {}
+//class AlreadyPublishedException  extends RuleViolationException  {}
+//class AlreadyDeletedException  extends RuleViolationException  {}
+//class OrganizationalUnitHierarchyViolationException  extends RuleViolationException{}
+//class AlreadyWithdrawnException  extends RuleViolationException  {}
+//class LockingException  extends RuleViolationException{}
+//class AlreadyRevokedException  extends RuleViolationException{}
+//class AlreadyExistsException  extends RuleViolationException  {}
+//class PidAlreadyAssignedException  extends RuleViolationException {}
+//class UserGroupHierarchyViolationException  extends RuleViolationException{}
+//class ReadonlyViolationException  extends RuleViolationException  {}
+//class WorkflowViolationException  extends RuleViolationException{}
+//class AlreadyDeactiveException  extends RuleViolationException  {}
+//class NotPublishedException  extends RuleViolationException  {}
+//class OptimisticLockingException  extends RuleViolationException {}
+//class AlreadyActiveException  extends RuleViolationException  {}
+//class ReadonlyVersionException  extends RuleViolationException  {}
+//class ReadonlyAttributeViolationException  extends ReadonlyViolationException {}
+//class ReadonlyElementViolationException  extends ReadonlyViolationException  {}
+//class WorkflowTaskViolationException  extends RuleViolationException  {}
+//class ContextNameNotUniqueException  extends RuleViolationException  {}
+//class RelationRuleViolationException  extends RuleViolationException  {}
+//class OrganizationalUnitHasChildrenException  extends RuleViolationException{}
 
 //class SystemException  extends EscidocException{}
 //class SqlDatabaseSystemException  extends SystemException{}
