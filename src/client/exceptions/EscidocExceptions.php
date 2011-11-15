@@ -91,54 +91,54 @@ class MethodNotFoundException extends EscidocException{}
 
 class ApplicationException  extends EscidocException {}
 
-class ResourceNotFoundException  extends ApplicationException  {}
-class ActionNotFoundException  extends ResourceNotFoundException{}
-class WorkflowInstanceNotFoundException  extends ResourceNotFoundException{}
-class WorkflowTypeNotFoundException  extends ResourceNotFoundException  {}
-class RelationPredicateNotFoundException  extends ResourceNotFoundException {}
-class WorkflowTemplateNotFoundException  extends ResourceNotFoundException  {}
-class FileNotFoundException  extends ResourceNotFoundException  {}
-class WorkflowDefinitionNotFoundException  extends ResourceNotFoundException {}
-class ContainerNotFoundException  extends ResourceNotFoundException  {}
-class TransitionNotFoundException  extends ResourceNotFoundException  {}
-class AggregationTypeNotFoundException  extends ResourceNotFoundException{}
-class StructuralMapEntryNotFoundException  extends ResourceNotFoundException{}
-class ReferencedResourceNotFoundException  extends ResourceNotFoundException  {}
-class AggregationDefinitionNotFoundException  extends ResourceNotFoundException {}
-class SearchNotFoundException  extends ResourceNotFoundException  {}
-class IngestionSourceNotFoundException  extends ResourceNotFoundException{}
-class ItemNotFoundException  extends ResourceNotFoundException  {}
-class IngestionDefinitionNotFoundException  extends ResourceNotFoundException{}
-class ComponentNotFoundException  extends ResourceNotFoundException  {}
-class TargetBasketNotFoundException  extends ResourceNotFoundException {}
-class UserNotFoundException  extends ResourceNotFoundException  {}
-class ReportDefinitionNotFoundException  extends ResourceNotFoundException{}
-class PidNotFoundException  extends ResourceNotFoundException  {}
-class IndexNotFoundException  extends ResourceNotFoundException  {}
-class ContentStreamNotFoundException  extends ResourceNotFoundException{}
-class IngestionTaskNotFoundException  extends ResourceNotFoundException  {}
-class RelationTypeNotFoundException  extends ResourceNotFoundException {}
-class ContentModelNotFoundException  extends ResourceNotFoundException  {}
-class TaskListNotFoundException  extends ResourceNotFoundException  {}
-class MdRecordNotFoundException  extends ResourceNotFoundException  {}
-class XmlSchemaNotFoundException  extends ResourceNotFoundException  {}
-class RoleNotFoundException  extends ResourceNotFoundException  {}
-class ContextNotFoundException  extends ResourceNotFoundException {}
-class UserGroupNotFoundException  extends ResourceNotFoundException {}
-class ItemReferenceNotFoundException  extends ResourceNotFoundException{}
-class StagingFileNotFoundException  extends ResourceNotFoundException  {}
-class ContentRelationNotFoundException  extends ResourceNotFoundException{}
-class PreferenceNotFoundException  extends ResourceNotFoundException  {}
-class GrantNotFoundException  extends ResourceNotFoundException  {}
-class AdminDescriptorNotFoundException  extends ResourceNotFoundException {}
-class ScopeNotFoundException  extends ResourceNotFoundException  {}
-class RelationNotFoundException  extends ResourceNotFoundException {}
-class UserAccountNotFoundException  extends ResourceNotFoundException {}
-class VersionNotFoundException  extends ResourceNotFoundException  {}
-class RevisionNotFoundException  extends ResourceNotFoundException  {}
-class OrganizationalUnitNotFoundException  extends ResourceNotFoundException {}
-class TaskNotFoundException  extends ResourceNotFoundException  {}
-class UserAttributeNotFoundException  extends ResourceNotFoundException {}
+//class ResourceNotFoundException  extends ApplicationException  {}
+//class ActionNotFoundException  extends ResourceNotFoundException{}
+//class WorkflowInstanceNotFoundException  extends ResourceNotFoundException{}
+//class WorkflowTypeNotFoundException  extends ResourceNotFoundException  {}
+//class RelationPredicateNotFoundException  extends ResourceNotFoundException {}
+//class WorkflowTemplateNotFoundException  extends ResourceNotFoundException  {}
+//class FileNotFoundException  extends ResourceNotFoundException  {}
+//class WorkflowDefinitionNotFoundException  extends ResourceNotFoundException {}
+//class ContainerNotFoundException  extends ResourceNotFoundException  {}
+//class TransitionNotFoundException  extends ResourceNotFoundException  {}
+//class AggregationTypeNotFoundException  extends ResourceNotFoundException{}
+//class StructuralMapEntryNotFoundException  extends ResourceNotFoundException{}
+//class ReferencedResourceNotFoundException  extends ResourceNotFoundException  {}
+//class AggregationDefinitionNotFoundException  extends ResourceNotFoundException {}
+//class SearchNotFoundException  extends ResourceNotFoundException  {}
+//class IngestionSourceNotFoundException  extends ResourceNotFoundException{}
+//class ItemNotFoundException  extends ResourceNotFoundException  {}
+//class IngestionDefinitionNotFoundException  extends ResourceNotFoundException{}
+//class ComponentNotFoundException  extends ResourceNotFoundException  {}
+//class TargetBasketNotFoundException  extends ResourceNotFoundException {}
+//class UserNotFoundException  extends ResourceNotFoundException  {}
+//class ReportDefinitionNotFoundException  extends ResourceNotFoundException{}
+//class PidNotFoundException  extends ResourceNotFoundException  {}
+//class IndexNotFoundException  extends ResourceNotFoundException  {}
+//class ContentStreamNotFoundException  extends ResourceNotFoundException{}
+//class IngestionTaskNotFoundException  extends ResourceNotFoundException  {}
+//class RelationTypeNotFoundException  extends ResourceNotFoundException {}
+//class ContentModelNotFoundException  extends ResourceNotFoundException  {}
+//class TaskListNotFoundException  extends ResourceNotFoundException  {}
+//class MdRecordNotFoundException  extends ResourceNotFoundException  {}
+//class XmlSchemaNotFoundException  extends ResourceNotFoundException  {}
+//class RoleNotFoundException  extends ResourceNotFoundException  {}
+//class ContextNotFoundException  extends ResourceNotFoundException {}
+//class UserGroupNotFoundException  extends ResourceNotFoundException {}
+//class ItemReferenceNotFoundException  extends ResourceNotFoundException{}
+//class StagingFileNotFoundException  extends ResourceNotFoundException  {}
+//class ContentRelationNotFoundException  extends ResourceNotFoundException{}
+//class PreferenceNotFoundException  extends ResourceNotFoundException  {}
+//class GrantNotFoundException  extends ResourceNotFoundException  {}
+//class AdminDescriptorNotFoundException  extends ResourceNotFoundException {}
+//class ScopeNotFoundException  extends ResourceNotFoundException  {}
+//class RelationNotFoundException  extends ResourceNotFoundException {}
+//class UserAccountNotFoundException  extends ResourceNotFoundException {}
+//class VersionNotFoundException  extends ResourceNotFoundException  {}
+//class RevisionNotFoundException  extends ResourceNotFoundException  {}
+//class OrganizationalUnitNotFoundException  extends ResourceNotFoundException {}
+//class TaskNotFoundException  extends ResourceNotFoundException  {}
+//class UserAttributeNotFoundException  extends ResourceNotFoundException {}
 
 class SecurityException  extends EscidocException{}
 class AuthorizationException  extends SecurityException  {}
