@@ -3,6 +3,7 @@ namespace escidoc\client\exceptions\server;
 
 class EscidocException extends \RuntimeException {
 
+	/*
 	protected  $fullxmlmessage;
 
 	public function  __construct($fullxmlmessage, $code=null, $previous=null) {
@@ -29,7 +30,7 @@ class EscidocException extends \RuntimeException {
 
 	public function getFullEscidocMessage(){
 		return $this->fullxmlmessage;
-	}
+	}*/
 
 }
 ?>
