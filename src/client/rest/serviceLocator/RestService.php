@@ -1,7 +1,8 @@
 <?php
-namespace escidoc\client\rest;
+namespace escidoc\client\rest\serviceLocator;
 
-use escidoc\client\http\Url;
+require_once 'HTTP/Request.php';
+
 use escidoc\client\http\HttpMethod;
 use escidoc\client\exceptions\TransportException;
 
@@ -10,10 +11,7 @@ use \PEAR;
 use \Exception;
 use \Net_URL;
 
-require_once '../../../ClassLoader.php';
-require_once 'HTTP/Request.php';
-
-class RESTService {
+abstract class RestService {
 
 	/**
 	 * @var Net_URL
@@ -21,10 +19,25 @@ class RESTService {
 	private $serviceAddress;
 
 	/**
-	 * @param Net_URL $serviceAddress
+	 * @var string
 	 */
-	public function __construct(Net_URL $serviceAddress) {
+	private $path;
+
+	/**
+	 * @param Net_URL $serviceAddress
+	 * @param string $path
+	 *
+	 * @throws InvalidArgumentException if $serviceAddress or $path are null.
+	 */
+	public function __construct(Net_URL $serviceAddress, $path) {
+		if ($serviceAddress==null) {
+			throw new InvalidArgumentException("Please specifiy a serviceAddress.");
+		}
+		if ($path==null) {
+			throw new InvalidArgumentException("Please specify a REST path for this service.");
+		}
 		$this->serviceAddress = $serviceAddress;
+		$this->path = $this->checkPath($path);
 	}
 
 	/**
@@ -35,11 +48,9 @@ class RESTService {
 	 * @param mixed $data
 	 * @throws InternalClientException
 	 */
-	public function send(HttpMethod $httpMethod, $path, $data=null, $handle=null) {
+	protected function send(HttpMethod $httpMethod, $pathExtension, $data=null, $handle=null) {
 
-		$checkedPath = $this->checkPath($path);
-
-		$httpRequest = new HTTP_Request($this->serviceAddress->getURL().$checkedPath);
+		$httpRequest = new HTTP_Request($this->serviceAddress->getURL().$this->path.$pathExtension);
 		$httpRequest->addCookie('escidocCookie', $handle);
 		$httpRequest->setMethod($httpMethod);
 		if ($data != null) {
@@ -50,7 +61,8 @@ class RESTService {
 		$req_err = $httpRequest->sendRequest();
 		// catch connection timeouts, connection refused etc.
 		if (PEAR::isError($req_err)) {
-			throw new TransportException($this->serviceAddress->getURL()." : ".$req_err->getMessage(), $req_err->getCode());
+			throw new TransportException($this->serviceAddress->getURL()." : ".
+				$req_err->getMessage(), $req_err->getCode());
 		}
 		// handle response
 		$code = $httpRequest->getResponseCode();
@@ -72,7 +84,7 @@ class RESTService {
 	 *
 	 * @param HTTP_Request $httpRequest
 	 */
-	public final function configureHttpClient(HTTP_Request $httpRequest) {
+	private final function configureHttpClient(HTTP_Request $httpRequest) {
 		if($httpRequest == null) return;
 		// configurations for RestService
 		$httpRequest->_allowRedirects = false;
@@ -105,12 +117,5 @@ class RESTService {
 		}
 		return $path;
 	}
-}
-
-$r = new RestService(new Net_URL("http://localhost:8080"));
-try {
-	$r->send(HttpMethod::GET(), "/ir/items");
-} catch(Exception $e) {
-	echo $e."\n";
 }
 ?>
