@@ -1,5 +1,5 @@
 <?php
-namespace escidoc\services;
+namespace escidoc\client\interfaces\services;
 
 use escidoc\VersionHistory;
 
@@ -21,6 +21,6 @@ interface IVersionableResourceService {
 	 * @throws InternalClientException
 	 * @throws TransportException
 	 */
-	public function retrieveVersionHistory(string $resourceId);
+	function retrieveVersionHistory(string $resourceId);
 }
 ?>

@@ -1,5 +1,5 @@
 <?php
-namespace escidoc\services;
+namespace escidoc\client\interfaces\services;
 
 use escidoc\MetadataRecord;
 use escidoc\MetadataRecords;
@@ -22,7 +22,7 @@ interface IMdRecordService {
 	 * @throws InternalClientException
 	 * @throws TransportException
 	 */
-	public function retrieveMdRecords(string $resourceId);
+	function retrieveMdRecords(string $resourceId);
 
 	/**
 	 * Retrieve the specified MdRecord of the specified resource.
@@ -35,6 +35,6 @@ interface IMdRecordService {
 	 * @throws InternalClientException
 	 * @throws TransportException
 	 */
-	public function retrieveMdRecord(string $resourceId, string $mdRecordId);
+	function retrieveMdRecord(string $resourceId, string $mdRecordId);
 }
 ?>

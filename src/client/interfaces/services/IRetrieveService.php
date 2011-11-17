@@ -1,5 +1,5 @@
 <?php
-namespace escidoc\services;
+namespace escidoc\client\interfaces\services;
 
 use escidoc\Resource;
 
@@ -23,6 +23,6 @@ interface IRetrieveService {
 	 * @throws InternalClientException
 	 * @throws TransportException
 	 */
-	public function retrieve(string $resourceId);
+	function retrieve(string $resourceId);
 }
 ?>

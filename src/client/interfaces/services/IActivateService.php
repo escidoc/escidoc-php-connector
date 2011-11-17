@@ -1,5 +1,5 @@
 <?php
-namespace escidoc\services;
+namespace escidoc\client\interfaces\services;
 
 /**
  * Interface for HandlerClients, which support resources, which can be activated or deactivated.
@@ -19,7 +19,7 @@ interface IActivateService {
 	 * @throws InternalClientException
 	 * @throws TransportException
 	 */
-	public function activate(string $resourceId, TaskParam $taskParam);
+	function activate(string $resourceId, TaskParam $taskParam);
 
 	/**
 	 * Deactivates a resource.
@@ -31,6 +31,6 @@ interface IActivateService {
 	 * @throws InternalClientException
 	 * @throws TransportException
 	 */
-	public function deactivate(string $resourceId, TaskParam $taskParam);
+	function deactivate(string $resourceId, TaskParam $taskParam);
 }
 ?>

@@ -1,5 +1,5 @@
 <?php
-namespace escidoc\services;
+namespace escidoc\client\interfaces\services;
 
 use escidoc\Resource;
 
@@ -21,6 +21,6 @@ interface ICreateService {
 	 * @throws InternalClientException
 	 * @throws TransportException
 	 */
-	public function create(Resource $resource);
+	function create(Resource $resource);
 }
 ?>

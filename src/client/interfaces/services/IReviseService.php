@@ -1,5 +1,5 @@
 <?php
-namespace escidoc\services;
+namespace escidoc\client\interfaces\services;
 
 use escidoc\TaskResult;
 
@@ -22,6 +22,6 @@ interface IReviseService {
 	 * @throws InternalClientException
 	 * @throws TransportException
 	 */
-	public function revise(string $resourceId, TaskParam $param);
+	function revise(string $resourceId, TaskParam $param);
 }
 ?>

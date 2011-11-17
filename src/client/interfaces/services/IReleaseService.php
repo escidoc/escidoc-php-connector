@@ -1,5 +1,5 @@
 <?php
-namespace escidoc\services;
+namespace escidoc\client\interfaces\services;
 
 use escidoc\TaskResult;
 
@@ -22,6 +22,6 @@ interface IReleaseService {
 	 * @throws InternalClientException
 	 * @throws TransportException
 	 */
-	public function release(string $resourcId, TaskParam $param);
+	function release(string $resourcId, TaskParam $param);
 }
 ?>

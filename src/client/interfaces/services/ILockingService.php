@@ -1,5 +1,5 @@
 <?php
-namespace escidoc\services;
+namespace escidoc\client\interfaces\services;
 
 use escidoc\TaskResult;
 
@@ -22,7 +22,7 @@ interface ILockingService {
 	 * @throws InternalClientException
 	 * @throws TransportException
 	 */
-	public function lock(string $resourceId, TaskParam $param);
+	function lock(string $resourceId, TaskParam $param);
 
 	/**
 	 * Unlocks the resource.
@@ -35,6 +35,6 @@ interface ILockingService {
 	 * @throws InternalClientException
 	 * @throws TransportException
 	 */
-	public function unlock(string $resourceId, TaskParam $param);
+	function unlock(string $resourceId, TaskParam $param);
 }
 ?>

@@ -1,5 +1,5 @@
 <?php
-namespace escidoc\services;
+namespace escidoc\client\interfaces\services;
 
 /**
  * Interface for HandlerClients, which support resources, which can be deleted.
@@ -18,6 +18,6 @@ interface IDeleteService {
 	 * @throws InternalClientException
 	 * @throws TransportException
 	 */
-	public function delete(string $resourceId);
+	function delete(string $resourceId);
 }
 ?>

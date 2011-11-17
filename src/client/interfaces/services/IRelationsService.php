@@ -1,5 +1,5 @@
 <?php
-namespace escidoc\services;
+namespace escidoc\client\interfaces\services;
 
 /**
  * Interface for HandlerClients, which support resources, which themselves support Relations.
@@ -19,6 +19,6 @@ interface IRelationsService {
 	 * @throws InternalClientException
 	 * @throws TransportException
 	 */
-	public function retrieveRelations(string $resourceId);
+	function retrieveRelations(string $resourceId);
 }
 ?>

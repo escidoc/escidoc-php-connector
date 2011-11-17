@@ -1,5 +1,5 @@
 <?php
-namespace escidoc\services;
+namespace escidoc\client\interfaces\services;
 
 /**
  * Interface for HandlerClients, which support ContentStream services for their resources.
@@ -20,7 +20,7 @@ interface IContentStreamService {
 	 * @throws InternalClientException
 	 * @throws TransportException
 	 */
-	public function retrieveContentStream(string $resourceId, string $contentStreamName);
+	function retrieveContentStream(string $resourceId, string $contentStreamName);
 
 	/**
 	 * Retrieves all ContentStreams of a resource.
@@ -32,7 +32,7 @@ interface IContentStreamService {
 	 * @throws InternalClientException
 	 * @throws TransportException
 	 */
-	public function retrieveContentStreams(string $resourceId);
+	function retrieveContentStreams(string $resourceId);
 
 	/**
 	* Retrieves the content of a ContentStream of a resource.
@@ -46,6 +46,6 @@ interface IContentStreamService {
 	* @throws InternalClientException
 	* @throws TransportException
 	*/
-	public function retrieveContentStreamContent(string $resourceId, string $contentStreamName);
+	function retrieveContentStreamContent(string $resourceId, string $contentStreamName);
 }
 ?>

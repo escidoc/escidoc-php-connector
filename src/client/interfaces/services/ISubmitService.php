@@ -1,5 +1,5 @@
 <?php
-namespace escidoc\services;
+namespace escidoc\client\interfaces\services;
 
 use escidoc\TaskResult;
 
@@ -22,6 +22,6 @@ interface ISubmitService {
 	 * @throws InternalClientException
 	 * @throws TransportException
 	 */
-	public function submit(string $resourceId, TaskParam $param);
+	function submit(string $resourceId, TaskParam $param);
 }
 ?>

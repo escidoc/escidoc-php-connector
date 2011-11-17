@@ -1,5 +1,5 @@
 <?php
-namespace escidoc\services;
+namespace escidoc\client\interfaces\services;
 
 use escidoc\Resource;
 
@@ -23,7 +23,7 @@ interface IUpdateService {
 	 * @throws InternalClientException
 	 * @throws TransportException
 	 */
-	public function update(Resource $resource);
+	function update(Resource $resource);
 
 	/**
 	 * Updates the specified Resource on the infrastructure using the specified resourceId. This function can be convenient, if you like to update a resource by using a newly created Resource object.
@@ -37,6 +37,6 @@ interface IUpdateService {
 	 * @throws InternalClientException
 	 * @throws TransportException
 	 */
-	public function update(string $resourceId, Resource $resource);
+	function update(string $resourceId, Resource $resource);
 }
 ?>

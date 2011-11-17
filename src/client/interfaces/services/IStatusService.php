@@ -1,5 +1,5 @@
 <?php
-namespace escidoc\services;
+namespace escidoc\client\interfaces\services;
 
 /**
  * Interface for HandlerClients, which support resources, whose state can be changed to all existing values.

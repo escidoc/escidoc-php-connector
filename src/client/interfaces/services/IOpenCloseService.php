@@ -1,5 +1,5 @@
 <?php
-namespace escidoc\services;
+namespace escidoc\client\interfaces\services;
 
 use escidoc\TaskResult;
 
@@ -22,7 +22,7 @@ interface IOpenCloseService {
 	 * @throws InternalClientException
 	 * @throws TransportException
 	 */
-	public function open(string $resourceId, TaskParam $param);
+	function open(string $resourceId, TaskParam $param);
 
 	/**
 	 * Change the state of the resource to <i>closed</i>.
@@ -35,6 +35,6 @@ interface IOpenCloseService {
 	 * @throws InternalClientException
 	 * @throws TransportException
 	 */
-	public function close(string $resourceId, TaskParam $param);
+	function close(string $resourceId, TaskParam $param);
 }
 ?>

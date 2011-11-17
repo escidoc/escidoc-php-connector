@@ -1,5 +1,5 @@
 <?php
-namespace escidoc\services;
+namespace escidoc\client\interfaces\services;
 
 use escidoc\util\Url;
 
@@ -16,20 +16,20 @@ interface IHandlerService {
 	 *
 	 * @return string The handle for authentication.
 	 */
-	public function getHandle();
+	function getHandle();
 
 	/**
 	 * Sets the handle to use for authentication.
 	 *
 	 * @param string $handle
 	 */
-	public function setHandle(string $handle);
+	function setHandle(string $handle);
 
 	/**
 	 * Returns the serviceAddress to use for this HandlerClient implementation.
 	 *
 	 * @return Url The serviceAddress to use.
 	 */
-	public function getServiceAddress();
+	function getServiceAddress();
 }
 ?>
